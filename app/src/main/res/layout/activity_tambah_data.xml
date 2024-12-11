@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tambahData">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/tombolKembali"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:src="@drawable/icon_kembali" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SANTRI FINDER"
+            android:textAlignment="center"
+            android:textColor="#2C6E49"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="34dp"
+            tools:layout_editor_absoluteY="17dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Barang"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/namaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Nama Barang"
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Penemu"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/namaPenemu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Nama Penemu"
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jam Ditemukan"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/jamDitemukan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Jam Ditemukan"
+                android:inputType="time"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanggal Ditemukan"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/tanggalDitemukan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Tanggal Ditemukan"
+                android:inputType="date"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tempat Ditemukan"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/tempatDitemukan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Tempat Ditemukan"
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciri - ciri"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/ciriCiri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Ciri - Ciri Barang"
+                android:inputType="text"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <!--  RADIO BUTTON KEPEMILIKAN HEWAN TERMAK-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Barang"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"  />
+
+            <RadioGroup
+                android:id="@+id/statusBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:text="Belum Diambil" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:text="Sudah Diambil" />
+            </RadioGroup>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Foto"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/uploadFoto"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Upload Foto"
+                android:backgroundTint="#f0f0f0"
+                android:textColor="@android:color/black"
+                android:textSize="19sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/tombolSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIMPAN"
+                android:backgroundTint="#16AF2E"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/tombolBatal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BATAL"
+                android:backgroundTint="#6E402C"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>
