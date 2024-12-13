@@ -7,229 +7,223 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".tambahData">
 
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:gravity="center_vertical">
 
         <ImageButton
             android:id="@+id/tombolKembali"
-            android:layout_width="45dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
             android:background="@android:color/transparent"
-            android:padding="3dp"
+            android:contentDescription="Kembali"
             android:src="@drawable/icon_kembali" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="SANTRI FINDER"
             android:textAlignment="center"
             android:textColor="#2C6E49"
-            android:textSize="35dp"
-            android:textStyle="bold"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="17dp" />
+            android:textSize="30sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Input Form -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingTop="10dp">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:orientation="vertical"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-
+            <!-- Nama Barang -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama Barang"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/namaBarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Nama Barang"
+                android:layout_marginBottom="15dp"
                 android:inputType="text"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
-
+            <!-- Nama Penemu -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nama Penemu"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/namaPenemu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Nama Penemu"
+                android:layout_marginBottom="15dp"
                 android:inputType="text"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
-
+            <!-- Jam Ditemukan -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jam Ditemukan"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
-            <EditText
+            <Button
                 android:id="@+id/jamDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukan Jam Ditemukan"
-                android:inputType="time"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="15dp"
+                android:text="Pilih Jam" />
 
-
+            <!-- Tanggal Ditemukan -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tanggal Ditemukan"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
-            <EditText
+            <Button
                 android:id="@+id/tanggalDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Masukan Tanggal Ditemukan"
-                android:inputType="date"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_marginBottom="15dp"
+                android:text="Pilih Tanggal" />
 
+
+            <!-- Tempat Ditemukan -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Tempat Ditemukan"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/tempatDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Tempat Ditemukan"
+                android:layout_marginBottom="15dp"
                 android:inputType="text"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
+            <!-- Ciri-ciri -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ciri - ciri"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/ciriCiri"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Ciri - Ciri Barang"
+                android:layout_marginBottom="15dp"
                 android:inputType="text"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:padding="12dp" />
 
-
-            <!--  RADIO BUTTON KEPEMILIKAN HEWAN TERMAK-->
+            <!-- Status Barang -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Status Barang"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp"  />
+                android:textSize="16sp" />
 
             <RadioGroup
                 android:id="@+id/statusBarang"
+                android:layout_marginBottom="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp">
+                android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/statusBelumDiambil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="16sp"
                     android:text="Belum Diambil" />
 
                 <RadioButton
+                    android:id="@+id/statusSudahDiambil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textSize="16sp"
                     android:text="Sudah Diambil" />
             </RadioGroup>
+
+            <!-- Upload Foto -->
 
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Upload Foto"
+                android:text="Upload Foto Barang"
                 android:textStyle="bold"
                 android:textColor="#2C6E49"
-                android:textSize="16sp"
-                android:layout_marginBottom="8dp" />
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gambarPreview"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_placehoder" />
+
 
             <Button
                 android:id="@+id/uploadFoto"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
                 android:text="Upload Foto"
                 android:backgroundTint="#f0f0f0"
-                android:textColor="@android:color/black"
-                android:textSize="19sp"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:textColor="@android:color/black" />
 
+            <!-- Tombol -->
             <Button
                 android:id="@+id/tombolSimpan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="SIMPAN"
                 android:backgroundTint="#16AF2E"
-                android:textColor="@android:color/white"
-                android:textSize="19sp"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
+                android:textColor="@android:color/white" />
 
             <Button
                 android:id="@+id/tombolBatal"
@@ -237,16 +231,7 @@
                 android:layout_height="wrap_content"
                 android:text="BATAL"
                 android:backgroundTint="#6E402C"
-                android:textColor="@android:color/white"
-                android:textSize="19sp"
-                android:padding="12dp"
-                android:layout_marginBottom="16dp" />
-
-
+                android:textColor="@android:color/white" />
         </LinearLayout>
     </ScrollView>
-
-
-
-
 </LinearLayout>

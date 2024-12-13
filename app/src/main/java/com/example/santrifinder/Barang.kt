@@ -1,0 +1,13 @@
+package com.example.santrifinder
+
+data class Barang(
+    val id: Int,
+    val namaBarang: String,
+    val namaPenemu: String,
+    val jamDitemukan: String,
+    val tanggalDitemukan: String,
+    val tempatDitemukan: String,
+    val ciriCiri: String,
+    val statusBarang: String,
+    val gambarData: ByteArray?
+)

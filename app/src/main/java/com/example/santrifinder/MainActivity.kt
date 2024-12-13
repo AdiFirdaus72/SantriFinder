@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+
 // DEKLARASI UNTUK BERPINDAH KE ACTIVITY TAMBAH DATA
 private lateinit var tombolTambahData: LinearLayout
 

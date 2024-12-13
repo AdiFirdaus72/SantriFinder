@@ -1,27 +1,43 @@
 package com.example.santrifinder
 
+import BarangAdapter
+import DatabaseHelper
 import android.os.Bundle
-import android.widget.ImageButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class DataBarang : AppCompatActivity() {
+
+    private lateinit var databaseHelper: DatabaseHelper
+    private lateinit var barangAdapter: BarangAdapter
+    private lateinit var recyclerView: RecyclerView
+    private val barangList = ArrayList<Barang>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_data_barang)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
 
-        // TOMBOL KEMBALI
-        val tombolKembali: ImageButton = findViewById(R.id.tombolKembali)
-        tombolKembali.setOnClickListener {
-            onBackPressed()
-        }
+        databaseHelper = DatabaseHelper(this)
+        recyclerView = findViewById(R.id.recyclerViewBarang)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        loadData()
+
+        barangAdapter = BarangAdapter(this, barangList, onEdit = { barang ->
+            // Logika edit data
+        }, onDelete = { barang ->
+            // Logika hapus data
+//            databaseHelper.deleteBarang(barang.id)
+            loadData()
+        })
+
+        recyclerView.adapter = barangAdapter
+    }
+
+    private fun loadData() {
+        barangList.clear()
+//        barangList.addAll(databaseHelper.getAllBarang())
+        barangAdapter.notifyDataSetChanged()
     }
 }
