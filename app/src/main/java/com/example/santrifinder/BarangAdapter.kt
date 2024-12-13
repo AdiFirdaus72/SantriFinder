@@ -1,8 +1,10 @@
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.santrifinder.Barang
@@ -10,17 +12,18 @@ import com.example.santrifinder.R
 
 class BarangAdapter(
     private val context: Context,
-    private val dataList: ArrayList<Barang>,
-    private val onEdit: (Barang) -> Unit,
-    private val onDelete: (Barang) -> Unit
+    private val dataList: ArrayList<Barang>
 ) : RecyclerView.Adapter<BarangAdapter.BarangViewHolder>() {
 
     class BarangViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvNamaBarang: TextView = view.findViewById(R.id.tvNamaBarang)
         val tvNamaPenemu: TextView = view.findViewById(R.id.tvNamaPenemu)
         val tvTanggal: TextView = view.findViewById(R.id.tvTanggal)
-        val btnEdit: ImageButton = view.findViewById(R.id.btnEdit)
-        val btnDelete: ImageButton = view.findViewById(R.id.btnDelete)
+        val tvJam: TextView = view.findViewById(R.id.tvJam)
+        val tvTempat: TextView = view.findViewById(R.id.tvTempat)
+        val tvCiri: TextView = view.findViewById(R.id.tvCiri)
+        val tvStatus: TextView = view.findViewById(R.id.tvStatus)
+        val ivGambarBarang: ImageView = view.findViewById(R.id.ivGambarBarang)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BarangViewHolder {
@@ -30,12 +33,23 @@ class BarangAdapter(
 
     override fun onBindViewHolder(holder: BarangViewHolder, position: Int) {
         val barang = dataList[position]
+
+        // Menampilkan data teks ke dalam TextView
         holder.tvNamaBarang.text = barang.namaBarang
         holder.tvNamaPenemu.text = barang.namaPenemu
         holder.tvTanggal.text = barang.tanggalDitemukan
+        holder.tvJam.text = barang.jamDitemukan
+        holder.tvTempat.text = barang.tempatDitemukan
+        holder.tvCiri.text = barang.ciriCiri
+        holder.tvStatus.text = barang.statusBarang
 
-        holder.btnEdit.setOnClickListener { onEdit(barang) }
-        holder.btnDelete.setOnClickListener { onDelete(barang) }
+
+
+        // Menampilkan gambar jika ada
+        if (barang.gambarData != null) {
+            val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarData, 0, barang.gambarData.size)
+            holder.ivGambarBarang.setImageBitmap(bitmap)
+        }
     }
 
     override fun getItemCount(): Int = dataList.size
