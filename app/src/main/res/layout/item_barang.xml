@@ -1,73 +1,98 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:background="?android:attr/selectableItemBackground" >
+    android:padding="12dp"
+    android:background="#ffffff"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp">
 
+    <!-- Gambar Barang -->
+    <ImageView
+        android:id="@+id/ivGambarBarang"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <!-- Nama Barang -->
     <TextView
         android:id="@+id/tvNamaBarang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama Barang"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
 
+    <!-- Nama Penemu -->
     <TextView
         android:id="@+id/tvNamaPenemu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama Penemu"
-        android:textSize="25sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
+    <!-- Tanggal Ditemukan -->
     <TextView
         android:id="@+id/tvTanggal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tanggal Ditemukan"
-        android:textSize="20sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
+    <!-- Jam Ditemukan -->
     <TextView
         android:id="@+id/tvJam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jam Ditemukan"
-        android:textSize="20sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
+    <!-- Tempat Ditemukan -->
     <TextView
         android:id="@+id/tvTempat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tempat Ditemukan"
-        android:textSize="20sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
+    <!-- Ciri-Ciri Barang -->
     <TextView
         android:id="@+id/tvCiri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ciri-Ciri"
-        android:textSize="20sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
+    <!-- Status Barang -->
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Status Barang"
-        android:textSize="20sp"
-        android:paddingTop="4dp" />
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
 
-    <!-- Menambahkan ImageView untuk gambar barang -->
     <ImageView
-        android:id="@+id/ivGambarBarang"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@android:drawable/ic_menu_gallery"
-        android:scaleType="centerCrop"
-        android:paddingTop="8dp" />
+        android:id="@+id/btnEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/icon_edit"
+        android:contentDescription="Edit Barang"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
 
 </LinearLayout>
