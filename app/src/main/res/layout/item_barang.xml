@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama Barang"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:textStyle="bold" />
 
     <TextView
@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Nama Penemu"
-        android:textSize="14sp"
+        android:textSize="25sp"
         android:paddingTop="4dp" />
 
     <TextView
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tanggal Ditemukan"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:paddingTop="4dp" />
 
     <TextView
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Jam Ditemukan"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:paddingTop="4dp" />
 
     <TextView
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tempat Ditemukan"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:paddingTop="4dp" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ciri-Ciri"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:paddingTop="4dp" />
 
     <TextView
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Status Barang"
-        android:textSize="12sp"
+        android:textSize="20sp"
         android:paddingTop="4dp" />
 
     <!-- Menambahkan ImageView untuk gambar barang -->

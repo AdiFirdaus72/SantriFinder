@@ -3,6 +3,7 @@ package com.example.santrifinder
 import BarangAdapter
 import DatabaseHelper
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,6 +18,9 @@ class DataBarang : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_barang)
+
+        val tombolKembali: ImageButton = findViewById(R.id.tombolKembali)
+        tombolKembali.setOnClickListener { onBackPressed() }
 
         // Database Helper
         dbHelper = DatabaseHelper(this)

@@ -1,34 +1,50 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#ffffff"
+    tools:context=".DataBarang">
 
-    <!-- Header -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/tombolKembali"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:padding="3dp"
+            android:src="@drawable/icon_kembali" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DATA BARANG"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:text="SANTRI FINDER"
             android:textAlignment="center"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+            android:textColor="#2C6E49"
+            android:textSize="35dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewBarang"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="8dp" />
-
+        android:layout_marginBottom="25dp"
+        android:textSize="50dp"
+        android:padding="8dp"
+        android:clipToPadding="true" />
 </LinearLayout>

@@ -35,13 +35,13 @@ class BarangAdapter(
         val barang = dataList[position]
 
         // Menampilkan data teks ke dalam TextView
-        holder.tvNamaBarang.text = barang.namaBarang
-        holder.tvNamaPenemu.text = barang.namaPenemu
-        holder.tvTanggal.text = barang.tanggalDitemukan
-        holder.tvJam.text = barang.jamDitemukan
-        holder.tvTempat.text = barang.tempatDitemukan
-        holder.tvCiri.text = barang.ciriCiri
-        holder.tvStatus.text = barang.statusBarang
+        holder.tvNamaBarang.text = "Nama Barang: " + barang.namaBarang
+        holder.tvNamaPenemu.text = "Nama Penemu: " + barang.namaPenemu
+        holder.tvTanggal.text = "Tanggal Ditemukan: " + barang.tanggalDitemukan
+        holder.tvJam.text = "Jam Ditemukan: " + barang.jamDitemukan
+        holder.tvTempat.text = "Tempat Ditemukan: " + barang.tempatDitemukan
+        holder.tvCiri.text = "Ciri-Ciri: " + barang.ciriCiri
+        holder.tvStatus.text = "Status Barang: " + barang.statusBarang
 
 
 
