@@ -48,8 +48,8 @@ class tambahData : AppCompatActivity() {
         namaPenemu = findViewById(R.id.namaPenemu)
         tempatDitemukan = findViewById(R.id.tempatDitemukan)
         ciriCiri = findViewById(R.id.ciriCiri)
-        statusBelumDiambil = findViewById(R.id.statusBelumDiambil)
-        statusSudahDiambil = findViewById(R.id.statusSudahDiambil)
+//        statusBelumDiambil = findViewById(R.id.statusBelumDiambil)
+//        statusSudahDiambil = findViewById(R.id.statusSudahDiambil)
         jamDitemukan = findViewById(R.id.jamDitemukan)
         tanggalDitemukan = findViewById(R.id.tanggalDitemukan)
         uploadFoto = findViewById(R.id.uploadFoto)
@@ -115,7 +115,7 @@ class tambahData : AppCompatActivity() {
         val penemu = namaPenemu.text.toString()
         val tempat = tempatDitemukan.text.toString()
         val ciri = ciriCiri.text.toString()
-        val status = if (statusBelumDiambil.isChecked) "Belum Diambil" else "Sudah Diambil"
+        val status = "Belum Diambil"
 
         if (nama.isNotBlank() && penemu.isNotBlank() && tempat.isNotBlank() && selectedImage != null) {
             val dbHelper = DatabaseHelper(this)

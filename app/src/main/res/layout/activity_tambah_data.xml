@@ -159,37 +159,35 @@
                 android:padding="12dp" />
 
             <!-- Status Barang -->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Status Barang"
-                android:textStyle="bold"
-                android:textColor="#2C6E49"
-                android:textSize="16sp" />
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Status Barang"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="#2C6E49"-->
+<!--                android:textSize="16sp" />-->
 
-            <RadioGroup
-                android:id="@+id/statusBarang"
-                android:layout_marginBottom="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+<!--            <RadioGroup-->
+<!--                android:id="@+id/statusBarang"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
 
-                <RadioButton
-                    android:id="@+id/statusBelumDiambil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Belum Diambil" />
+<!--                <RadioButton-->
+<!--                    android:id="@+id/statusBelumDiambil"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Belum Diambil" />-->
 
-                <RadioButton
-                    android:id="@+id/statusSudahDiambil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sudah Diambil" />
-            </RadioGroup>
+<!--                <RadioButton-->
+<!--                    android:id="@+id/statusSudahDiambil"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Sudah Diambil" />-->
+<!--            </RadioGroup>-->
 
+            
             <!-- Upload Foto -->
-
-
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
