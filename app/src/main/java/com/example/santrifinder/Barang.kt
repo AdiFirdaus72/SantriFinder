@@ -9,5 +9,9 @@ data class Barang(
     val tempatDitemukan: String,
     val ciriCiri: String,
     val statusBarang: String,
-    val gambarData: ByteArray?
+    val gambarData: ByteArray?,
+
+    val namaPemilik: String,
+    val tanggalPengambilan: String,
+    val jamPengambilan: String
 )

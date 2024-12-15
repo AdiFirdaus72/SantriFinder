@@ -15,7 +15,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 $COLUMN_TEMPAT_DITEMUKAN TEXT,
                 $COLUMN_CIRI_CIRI TEXT,
                 $COLUMN_STATUS_BARANG TEXT,
-                $COLUMN_GAMBAR_DATA BLOB
+                $COLUMN_GAMBAR_DATA BLOB, 
+                
+                $COLUMN_NAMA_PEMILIK TEXT,
+                $COLUMN_JAM_PENGAMBILAN TEXT,
+                $COLUMN_TANGGAL_PENGAMBILAN TEXT
+                
             )
         """
         db.execSQL(createTable)
@@ -40,6 +45,11 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_CIRI_CIRI = "ciri_ciri"
         const val COLUMN_STATUS_BARANG = "status_barang"
         const val COLUMN_GAMBAR_DATA = "gambar_data"
+
+        const val COLUMN_NAMA_PEMILIK = "nama_pemilik"
+        const val COLUMN_JAM_PENGAMBILAN = "jam_pengambilan"
+        const val COLUMN_TANGGAL_PENGAMBILAN = "tanggal_pengambilan"
+
     }
 
     fun getAllBarang(): ArrayList<Barang> {
@@ -62,9 +72,14 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 val statusBarang = cursor.getString(cursor.getColumnIndex(COLUMN_STATUS_BARANG))
                 val gambarData = cursor.getBlob(cursor.getColumnIndex(COLUMN_GAMBAR_DATA))
 
+                val namaPemilik = cursor.getString(cursor.getColumnIndex(COLUMN_NAMA_PEMILIK))
+                val jamPengambilan = cursor.getString(cursor.getColumnIndex(COLUMN_JAM_PENGAMBILAN))
+                val tanggalPengambilan = cursor.getString(cursor.getColumnIndex(COLUMN_TANGGAL_PENGAMBILAN))
+
+
                 val barang = Barang(
                     id, namaBarang, namaPenemu, jamDitemukan, tanggalDitemukan,
-                    tempatDitemukan, ciriCiri, statusBarang, gambarData
+                    tempatDitemukan, ciriCiri, statusBarang, gambarData, namaPemilik, tanggalPengambilan, jamPengambilan
                 )
                 barangList.add(barang)
             } while (cursor.moveToNext())

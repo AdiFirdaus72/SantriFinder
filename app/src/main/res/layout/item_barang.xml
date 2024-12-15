@@ -86,6 +86,36 @@
         android:textColor="#666666"
         android:layout_marginTop="4dp" />
 
+    <!-- Nama Pemilik -->
+    <TextView
+        android:id="@+id/tvNamaPenilik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Pemilik"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+
+    <!-- Tanggal Pengambilan -->
+    <TextView
+        android:id="@+id/tvTanggalPengambilan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Pengambilan"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+
+    <!-- Jam Ditemukan -->
+    <TextView
+        android:id="@+id/tvJamPengambilan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jam Pengambilan"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

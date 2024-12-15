@@ -31,6 +31,10 @@ class tambahData : AppCompatActivity() {
     private var selectedJam: String = ""
     private var selectedTanggal: String = ""
 
+
+//    private lateinit var namaPemilik: EditText
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -54,6 +58,8 @@ class tambahData : AppCompatActivity() {
         tanggalDitemukan = findViewById(R.id.tanggalDitemukan)
         uploadFoto = findViewById(R.id.uploadFoto)
         gambarPreview = findViewById(R.id.gambarPreview)
+
+//        namaPemilik = findViewById(R.id.namaPemilik)
 
         val tombolKembali: ImageButton = findViewById(R.id.tombolKembali)
         tombolKembali.setOnClickListener { onBackPressed() }
@@ -117,6 +123,10 @@ class tambahData : AppCompatActivity() {
         val ciri = ciriCiri.text.toString()
         val status = "Belum Diambil"
 
+        val pemilik =  "-"
+        val tanggalPengambilan = "-"
+        val jamPengambilan = "-"
+
         if (nama.isNotBlank() && penemu.isNotBlank() && tempat.isNotBlank() && selectedImage != null) {
             val dbHelper = DatabaseHelper(this)
             val db = dbHelper.writableDatabase
@@ -134,8 +144,11 @@ class tambahData : AppCompatActivity() {
                     ${DatabaseHelper.COLUMN_TEMPAT_DITEMUKAN},
                     ${DatabaseHelper.COLUMN_CIRI_CIRI},
                     ${DatabaseHelper.COLUMN_STATUS_BARANG},
-                    ${DatabaseHelper.COLUMN_GAMBAR_DATA})
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    ${DatabaseHelper.COLUMN_GAMBAR_DATA}, 
+${DatabaseHelper.COLUMN_NAMA_PEMILIK},
+${DatabaseHelper.COLUMN_JAM_PENGAMBILAN},
+${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN})
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """
 
             val stmt = db.compileStatement(sql)
@@ -147,6 +160,11 @@ class tambahData : AppCompatActivity() {
             stmt.bindString(6, ciri)
             stmt.bindString(7, status)
             stmt.bindBlob(8, imageBytes)
+            stmt.bindString(9, pemilik)
+            stmt.bindString(10, jamPengambilan)
+            stmt.bindString(11, tanggalPengambilan)
+
+
             stmt.executeInsert()
 
             Toast.makeText(this, "Data berhasil disimpan!", Toast.LENGTH_SHORT).show()

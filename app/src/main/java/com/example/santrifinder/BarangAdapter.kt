@@ -24,6 +24,12 @@ class BarangAdapter(
         val tvCiri: TextView = view.findViewById(R.id.tvCiri)
         val tvStatus: TextView = view.findViewById(R.id.tvStatus)
         val ivGambarBarang: ImageView = view.findViewById(R.id.ivGambarBarang)
+
+        val tvNamaPemilik: TextView = view.findViewById(R.id.tvNamaPenilik)
+        val tvTanggalPengambilan: TextView = view.findViewById(R.id.tvTanggalPengambilan)
+        val tvJamPengambilan: TextView = view.findViewById(R.id.tvJamPengambilan)
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BarangViewHolder {
@@ -42,6 +48,10 @@ class BarangAdapter(
         holder.tvTempat.text = "Tempat Ditemukan: " + barang.tempatDitemukan
         holder.tvCiri.text = "Ciri-Ciri: " + barang.ciriCiri
         holder.tvStatus.text = "Status Barang: " + barang.statusBarang
+
+        holder.tvNamaPemilik.text = "Nama Pemilik: " + barang.namaPemilik
+        holder.tvTanggalPengambilan.text = "Tanggal Pengambilan: " + barang.tanggalPengambilan
+        holder.tvJamPengambilan.text = "Jam Pengambilan: " + barang.jamPengambilan
 
 
 
