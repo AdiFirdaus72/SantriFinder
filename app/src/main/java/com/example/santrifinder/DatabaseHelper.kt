@@ -19,7 +19,9 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 
                 $COLUMN_NAMA_PEMILIK TEXT,
                 $COLUMN_JAM_PENGAMBILAN TEXT,
-                $COLUMN_TANGGAL_PENGAMBILAN TEXT
+                $COLUMN_TANGGAL_PENGAMBILAN TEXT,
+                $COLUMN_GAMBAR_PENGAMBILAN BLOB
+                
                 
             )
         """
@@ -49,6 +51,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         const val COLUMN_NAMA_PEMILIK = "nama_pemilik"
         const val COLUMN_JAM_PENGAMBILAN = "jam_pengambilan"
         const val COLUMN_TANGGAL_PENGAMBILAN = "tanggal_pengambilan"
+        const val COLUMN_GAMBAR_PENGAMBILAN = "gambar_pengambilan"
 
     }
 
@@ -75,11 +78,12 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 val namaPemilik = cursor.getString(cursor.getColumnIndex(COLUMN_NAMA_PEMILIK))
                 val jamPengambilan = cursor.getString(cursor.getColumnIndex(COLUMN_JAM_PENGAMBILAN))
                 val tanggalPengambilan = cursor.getString(cursor.getColumnIndex(COLUMN_TANGGAL_PENGAMBILAN))
+                val gambarPengambilan = cursor.getBlob(cursor.getColumnIndex(COLUMN_GAMBAR_PENGAMBILAN))
 
 
                 val barang = Barang(
                     id, namaBarang, namaPenemu, jamDitemukan, tanggalDitemukan,
-                    tempatDitemukan, ciriCiri, statusBarang, gambarData, namaPemilik, tanggalPengambilan, jamPengambilan
+                    tempatDitemukan, ciriCiri, statusBarang, gambarData, namaPemilik, tanggalPengambilan, jamPengambilan, gambarPengambilan
                 )
                 barangList.add(barang)
             } while (cursor.moveToNext())

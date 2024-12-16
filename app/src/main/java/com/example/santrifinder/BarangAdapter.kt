@@ -28,6 +28,8 @@ class BarangAdapter(
         val tvNamaPemilik: TextView = view.findViewById(R.id.tvNamaPenilik)
         val tvTanggalPengambilan: TextView = view.findViewById(R.id.tvTanggalPengambilan)
         val tvJamPengambilan: TextView = view.findViewById(R.id.tvJamPengambilan)
+//        val ivGambarPengambilan: ImageView = view.findViewById(R.id.ivGambarPengambilan)
+
 
 
     }
@@ -60,6 +62,12 @@ class BarangAdapter(
             val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarData, 0, barang.gambarData.size)
             holder.ivGambarBarang.setImageBitmap(bitmap)
         }
+
+        // Menampilkan gambar pengambilan jika ada
+//        if (barang.gambarPengambilan != null) {
+//            val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarPengambilan, 0, barang.gambarPengambilan.size)
+//            holder.ivGambarPengambilan.setImageBitmap(bitmap)
+//        }
     }
 
     override fun getItemCount(): Int = dataList.size

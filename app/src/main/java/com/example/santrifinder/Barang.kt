@@ -13,5 +13,6 @@ data class Barang(
 
     val namaPemilik: String,
     val tanggalPengambilan: String,
-    val jamPengambilan: String
+    val jamPengambilan: String,
+    val gambarPengambilan: ByteArray?
 )

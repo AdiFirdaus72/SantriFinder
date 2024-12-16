@@ -114,7 +114,6 @@ class tambahData : AppCompatActivity() {
             gambarPreview.setImageBitmap(selectedImage)
         }
     }
-
     // Fungsi Simpan Data
     private fun simpanData() {
         val nama = namaBarang.text.toString()
@@ -135,6 +134,8 @@ class tambahData : AppCompatActivity() {
             selectedImage?.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
             val imageBytes = byteArrayOutputStream.toByteArray()
 
+            val imageBytesPengambilan = null
+
             val sql = """
                 INSERT INTO ${DatabaseHelper.TABLE_NAME_GAMBAR} (
                     ${DatabaseHelper.COLUMN_NAMA_BARANG},
@@ -147,8 +148,9 @@ class tambahData : AppCompatActivity() {
                     ${DatabaseHelper.COLUMN_GAMBAR_DATA}, 
 ${DatabaseHelper.COLUMN_NAMA_PEMILIK},
 ${DatabaseHelper.COLUMN_JAM_PENGAMBILAN},
-${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN})
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN}, 
+                    ${DatabaseHelper.COLUMN_GAMBAR_PENGAMBILAN})
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """
 
             val stmt = db.compileStatement(sql)
@@ -163,6 +165,7 @@ ${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN})
             stmt.bindString(9, pemilik)
             stmt.bindString(10, jamPengambilan)
             stmt.bindString(11, tanggalPengambilan)
+            stmt.bindNull(12)
 
 
             stmt.executeInsert()
