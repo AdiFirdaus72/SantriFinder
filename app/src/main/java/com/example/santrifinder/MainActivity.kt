@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         // AKSI UNTUK BERPINDAH KE ACTIVITY DATA BANTUAN
         tombolBantuan = findViewById(R.id.tombolBantuan)
         tombolBantuan.setOnClickListener {
-            val intent = Intent(this, DataBarang::class.java)
+            val intent = Intent(this, bantuan::class.java)
             startActivity(intent)
         }
 

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".konfirmasiPengambilan">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/tombolKembali"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Kembali"
+            android:src="@drawable/icon_kembali" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SANTRI FINDER"
+            android:textAlignment="center"
+            android:textColor="#2C6E49"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Input Form -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <!-- Nama Barang -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Barang"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/namaBarang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Masukan Nama Barang"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:padding="12dp" />
+
+            <!-- Upload Foto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upload Foto Barang"
+                android:textStyle="bold"
+                android:textColor="#2C6E49"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gambarPreview"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_placehoder" />
+
+
+            <Button
+                android:id="@+id/uploadFoto"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:text="Upload Foto"
+                android:backgroundTint="#f0f0f0"
+                android:textColor="@android:color/black" />
+
+            <!-- Tombol -->
+            <Button
+                android:id="@+id/tombolSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KONFIRMASI PENGAMBILAN"
+                android:backgroundTint="#16AF2E"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/tombolBatal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BATALKAN PENGAMBILAN"
+                android:backgroundTint="#6E402C"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
