@@ -1,4 +1,5 @@
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.santrifinder.Barang
+import com.example.santrifinder.konfirmasiPengambilan
 import com.example.santrifinder.R
 
 class BarangAdapter(
@@ -28,10 +30,8 @@ class BarangAdapter(
         val tvNamaPemilik: TextView = view.findViewById(R.id.tvNamaPenilik)
         val tvTanggalPengambilan: TextView = view.findViewById(R.id.tvTanggalPengambilan)
         val tvJamPengambilan: TextView = view.findViewById(R.id.tvJamPengambilan)
-//        val ivGambarPengambilan: ImageView = view.findViewById(R.id.ivGambarPengambilan)
-
-
-
+        val ivGambarPengambilan: ImageView = view.findViewById(R.id.ivGambarPengambilan)
+        val tombolKonfirmasi: ImageView = view.findViewById(R.id.tombolKonfirmasi)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BarangViewHolder {
@@ -50,12 +50,9 @@ class BarangAdapter(
         holder.tvTempat.text = "Tempat Ditemukan: " + barang.tempatDitemukan
         holder.tvCiri.text = "Ciri-Ciri: " + barang.ciriCiri
         holder.tvStatus.text = "Status Barang: " + barang.statusBarang
-
         holder.tvNamaPemilik.text = "Nama Pemilik: " + barang.namaPemilik
         holder.tvTanggalPengambilan.text = "Tanggal Pengambilan: " + barang.tanggalPengambilan
         holder.tvJamPengambilan.text = "Jam Pengambilan: " + barang.jamPengambilan
-
-
 
         // Menampilkan gambar jika ada
         if (barang.gambarData != null) {
@@ -63,11 +60,19 @@ class BarangAdapter(
             holder.ivGambarBarang.setImageBitmap(bitmap)
         }
 
+        // Aksi klik tombolKonfirmasi
+        holder.tombolKonfirmasi.setOnClickListener {
+            val intent = Intent(context, konfirmasiPengambilan::class.java)
+            intent.putExtra("NAMA_BARANG", barang.namaBarang)
+            intent.putExtra("NAMA_PEMILIK", barang.namaPemilik)
+            context.startActivity(intent)
+        }
+
         // Menampilkan gambar pengambilan jika ada
-//        if (barang.gambarPengambilan != null) {
-//            val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarPengambilan, 0, barang.gambarPengambilan.size)
-//            holder.ivGambarPengambilan.setImageBitmap(bitmap)
-//        }
+        if (barang.gambarPengambilan != null) {
+            val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarPengambilan, 0, barang.gambarPengambilan.size)
+            holder.ivGambarPengambilan.setImageBitmap(bitmap)
+        }
     }
 
     override fun getItemCount(): Int = dataList.size
