@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".tambahData">
+    tools:context=".EditDataBarang">
 
     <!-- Header -->
     <LinearLayout
@@ -32,7 +32,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="TAMBAH DATA"
+            android:text="EDIT DATA BARANG"
             android:textAlignment="center"
             android:textColor="#2C6E49"
             android:textSize="30sp"
@@ -158,35 +158,6 @@
                 android:inputType="text"
                 android:padding="12dp" />
 
-            <!-- Status Barang -->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Status Barang"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textColor="#2C6E49"-->
-<!--                android:textSize="16sp" />-->
-
-<!--            <RadioGroup-->
-<!--                android:id="@+id/statusBarang"-->
-<!--                android:layout_marginBottom="15dp"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content">-->
-
-<!--                <RadioButton-->
-<!--                    android:id="@+id/statusBelumDiambil"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Belum Diambil" />-->
-
-<!--                <RadioButton-->
-<!--                    android:id="@+id/statusSudahDiambil"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Sudah Diambil" />-->
-<!--            </RadioGroup>-->
-
-            
             <!-- Upload Foto -->
             <TextView
                 android:layout_width="match_parent"
@@ -214,34 +185,6 @@
                 android:backgroundTint="#f0f0f0"
                 android:textColor="@android:color/black" />
 
-            <!-- Upload Foto Pengambilan -->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Upload Foto Pengambilan"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textColor="#2C6E49"-->
-<!--                android:textSize="16sp" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/gambarPreviewPengambilan"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="200dp"-->
-<!--                android:layout_marginTop="16dp"-->
-<!--                android:scaleType="centerCrop"-->
-<!--                android:src="@drawable/icon_placehoder" />-->
-
-
-<!--            <Button-->
-<!--                android:id="@+id/uploadFotoPengambilan"-->
-<!--                android:layout_width="200dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginBottom="25dp"-->
-<!--                android:text="Upload Foto"-->
-<!--                android:backgroundTint="#f0f0f0"-->
-<!--                android:textColor="@android:color/black" />-->
-
-            <!-- Tombol -->
             <Button
                 android:id="@+id/tombolSimpan"
                 android:layout_width="match_parent"
