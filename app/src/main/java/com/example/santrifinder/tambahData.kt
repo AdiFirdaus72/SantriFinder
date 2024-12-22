@@ -52,8 +52,6 @@ class tambahData : AppCompatActivity() {
         namaPenemu = findViewById(R.id.namaPenemu)
         tempatDitemukan = findViewById(R.id.tempatDitemukan)
         ciriCiri = findViewById(R.id.ciriCiri)
-//        statusBelumDiambil = findViewById(R.id.statusBelumDiambil)
-//        statusSudahDiambil = findViewById(R.id.statusSudahDiambil)
         jamDitemukan = findViewById(R.id.jamDitemukan)
         tanggalDitemukan = findViewById(R.id.tanggalDitemukan)
         uploadFoto = findViewById(R.id.uploadFoto)
@@ -146,9 +144,9 @@ class tambahData : AppCompatActivity() {
                     ${DatabaseHelper.COLUMN_CIRI_CIRI},
                     ${DatabaseHelper.COLUMN_STATUS_BARANG},
                     ${DatabaseHelper.COLUMN_GAMBAR_DATA}, 
-${DatabaseHelper.COLUMN_NAMA_PEMILIK},
-${DatabaseHelper.COLUMN_JAM_PENGAMBILAN},
-${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN}, 
+                    ${DatabaseHelper.COLUMN_NAMA_PEMILIK},
+                    ${DatabaseHelper.COLUMN_JAM_PENGAMBILAN},
+                    ${DatabaseHelper.COLUMN_TANGGAL_PENGAMBILAN}, 
                     ${DatabaseHelper.COLUMN_GAMBAR_PENGAMBILAN})
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """
