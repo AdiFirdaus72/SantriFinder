@@ -28,11 +28,6 @@ class BarangAdapter(
         val tvStatus: TextView = view.findViewById(R.id.tvStatus)
         val ivGambarBarang: ImageView = view.findViewById(R.id.ivGambarBarang)
 
-//        val tvNamaPemilik: TextView = view.findViewById(R.id.tvNamaPenilik)
-//        val tvTanggalPengambilan: TextView = view.findViewById(R.id.tvTanggalPengambilan)
-//        val tvJamPengambilan: TextView = view.findViewById(R.id.tvJamPengambilan)
-//        val ivGambarPengambilan: ImageView = view.findViewById(R.id.ivGambarPengambilan)
-
         val tombolKonfirmasi: ImageView = view.findViewById(R.id.tombolKonfirmasi)
 
         // Tambahkan ID tombolEdit
@@ -56,10 +51,6 @@ class BarangAdapter(
         holder.tvCiri.text = "Ciri-Ciri: " + barang.ciriCiri
         holder.tvStatus.text = "Status Barang: " + barang.statusBarang
 
-//        holder.tvNamaPemilik.text = "Nama Pemilik: " + barang.namaPemilik
-//        holder.tvTanggalPengambilan.text = "Tanggal Pengambilan: " + barang.tanggalPengambilan
-//        holder.tvJamPengambilan.text = "Jam Pengambilan: " + barang.jamPengambilan
-
         // Menampilkan gambar jika ada
         if (barang.gambarData != null) {
             val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarData, 0, barang.gambarData.size)
@@ -81,11 +72,6 @@ class BarangAdapter(
             context.startActivity(intent)
         }
 
-        // Menampilkan gambar pengambilan jika ada
-//        if (barang.gambarPengambilan != null) {
-//            val bitmap: Bitmap = BitmapFactory.decodeByteArray(barang.gambarPengambilan, 0, barang.gambarPengambilan.size)
-//            holder.ivGambarPengambilan.setImageBitmap(bitmap)
-//        }
     }
 
     override fun getItemCount(): Int = dataList.size

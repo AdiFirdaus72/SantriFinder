@@ -86,42 +86,6 @@
         android:textColor="#666666"
         android:layout_marginTop="4dp" />
 
-<!--    &lt;!&ndash; Nama Pemilik &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/tvNamaPenilik"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Nama Pemilik"-->
-<!--        android:textSize="14sp"-->
-<!--        android:textColor="#666666"-->
-<!--        android:layout_marginTop="4dp" />-->
-
-<!--    &lt;!&ndash; Tanggal Pengambilan &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/tvTanggalPengambilan"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Tanggal Pengambilan"-->
-<!--        android:textSize="14sp"-->
-<!--        android:textColor="#666666"-->
-<!--        android:layout_marginTop="4dp" />-->
-
-<!--    &lt;!&ndash; Jam Ditemukan &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/tvJamPengambilan"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Jam Pengambilan"-->
-<!--        android:textSize="14sp"-->
-<!--        android:textColor="#666666"-->
-<!--        android:layout_marginTop="4dp" />-->
-
-<!--    &lt;!&ndash; Gambar Pengambilan &ndash;&gt;-->
-<!--        <ImageView-->
-<!--            android:id="@+id/ivGambarPengambilan"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="200dp"-->
-<!--            android:scaleType="centerCrop" />-->
 
     <LinearLayout
         android:layout_width="wrap_content"
