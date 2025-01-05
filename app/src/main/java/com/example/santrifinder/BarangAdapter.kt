@@ -67,9 +67,10 @@ class BarangAdapter(
 
         // Aksi klik tombolEdit
         holder.tombolEdit.setOnClickListener {
-            val intent = Intent(context, EditDataBarang::class.java)
-            intent.putExtra("NAMA_BARANG", barang.namaBarang) // Kirim data jika perlu
-            context.startActivity(intent)
+            val editIntent = Intent(context, EditDataBarang::class.java)
+            editIntent.putExtra("BARANG_ID", barang.id)
+            context.startActivity(editIntent)
+
         }
 
     }

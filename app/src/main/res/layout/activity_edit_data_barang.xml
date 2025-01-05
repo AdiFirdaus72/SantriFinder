@@ -63,7 +63,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/namaBarang"
+                android:id="@+id/editNamaBarang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Nama Barang"
@@ -81,7 +81,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/namaPenemu"
+                android:id="@+id/editNamaPenemu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Nama Penemu"
@@ -99,7 +99,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/jamDitemukan"
+                android:id="@+id/editJamDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -115,7 +115,7 @@
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/tanggalDitemukan"
+                android:id="@+id/editTanggalDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
@@ -132,7 +132,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/tempatDitemukan"
+                android:id="@+id/editTempatDitemukan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Tempat Ditemukan"
@@ -150,7 +150,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/ciriCiri"
+                android:id="@+id/editCiriCiri"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Masukan Ciri - Ciri Barang"
